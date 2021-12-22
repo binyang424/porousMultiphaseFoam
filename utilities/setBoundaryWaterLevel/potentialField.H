@@ -1,5 +1,4 @@
 {
-    
     volScalarField potential
         (
             IOobject
@@ -23,7 +22,9 @@
     {
         //- reading DEM informations
         DEMfile fixedPotentialDEM(args.option("DEM"));
-	scalar offsetPotential = args.optionLookupOrDefault<scalar>("offset",0.);
+ 	scalar offsetPotential = args.optionLookupOrDefault<scalar>("offset",0.);
+
+        //- reading DEM informations
 	if (offsetPotential==0)
 	{
 	    Info << nl << "Potential fixed using DEM" << endl;
